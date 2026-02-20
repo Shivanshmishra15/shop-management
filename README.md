@@ -1,6 +1,6 @@
-# Shop Management System
+# Shop Management
 
-A modern Desktop-based Shop Management System built with JavaFX. Features inventory management, billing with PDF invoice generation, and financial reporting.
+🚀 A modern, high-performance Shop Management System built with JavaFX. Features real-time inventory tracking, professional billing, and advanced financial analytics with a sleek Dark Mode UI.
 
 ## Features
 - **Modern UI**: Clean, responsive interface with Dark Mode support.
