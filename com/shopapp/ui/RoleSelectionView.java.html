@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>RoleSelectionView.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+.s5 { color: #7a7e85;}
+.ln { color: #4b5059; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+RoleSelectionView.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">shopapp</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">;</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">geometry</span><span class="s2">.</span><span class="s1">Insets</span><span class="s2">;</span>
+<a name="l4"><span class="ln">4    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">geometry</span><span class="s2">.</span><span class="s1">Pos</span><span class="s2">;</span>
+<a name="l5"><span class="ln">5    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">Scene</span><span class="s2">;</span>
+<a name="l6"><span class="ln">6    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.</span><span class="s1">Button</span><span class="s2">;</span>
+<a name="l7"><span class="ln">7    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.</span><span class="s1">Label</span><span class="s2">;</span>
+<a name="l8"><span class="ln">8    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">VBox</span><span class="s2">;</span>
+<a name="l9"><span class="ln">9    </span></a><span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">stage</span><span class="s2">.</span><span class="s1">Stage</span><span class="s2">;</span>
+<a name="l10"><span class="ln">10   </span></a>
+<a name="l11"><span class="ln">11   </span></a><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Objects</span><span class="s2">;</span>
+<a name="l12"><span class="ln">12   </span></a>
+<a name="l13"><span class="ln">13   </span></a><span class="s0">public class </span><span class="s1">RoleSelectionView </span><span class="s0">extends </span><span class="s1">VBox </span><span class="s2">{</span>
+<a name="l14"><span class="ln">14   </span></a>
+<a name="l15"><span class="ln">15   </span></a>    <span class="s0">private final </span><span class="s1">Stage stage</span><span class="s2">;</span>
+<a name="l16"><span class="ln">16   </span></a>
+<a name="l17"><span class="ln">17   </span></a>    <span class="s0">public </span><span class="s1">RoleSelectionView</span><span class="s2">(</span><span class="s1">Stage stage</span><span class="s2">) {</span>
+<a name="l18"><span class="ln">18   </span></a>        <span class="s0">this</span><span class="s2">.</span><span class="s1">stage </span><span class="s2">= </span><span class="s1">stage</span><span class="s2">;</span>
+<a name="l19"><span class="ln">19   </span></a>        
+<a name="l20"><span class="ln">20   </span></a>        <span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+<a name="l21"><span class="ln">21   </span></a>        <span class="s1">setSpacing</span><span class="s2">(</span><span class="s3">30</span><span class="s2">);</span>
+<a name="l22"><span class="ln">22   </span></a>        <span class="s1">setPadding</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Insets</span><span class="s2">(</span><span class="s3">60</span><span class="s2">));</span>
+<a name="l23"><span class="ln">23   </span></a>        <span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: #ffffff;&quot;</span><span class="s2">);</span>
+<a name="l24"><span class="ln">24   </span></a>
+<a name="l25"><span class="ln">25   </span></a>        <span class="s5">// Title</span>
+<a name="l26"><span class="ln">26   </span></a>        <span class="s1">Label lblTitle </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s4">&quot;Shop Management System&quot;</span><span class="s2">);</span>
+<a name="l27"><span class="ln">27   </span></a>        <span class="s1">lblTitle</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #0284c7;&quot;</span><span class="s2">);</span>
+<a name="l28"><span class="ln">28   </span></a>        
+<a name="l29"><span class="ln">29   </span></a>        <span class="s1">Label lblSubtitle </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s4">&quot;Select Your Role&quot;</span><span class="s2">);</span>
+<a name="l30"><span class="ln">30   </span></a>        <span class="s1">lblSubtitle</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-text-fill: #64748b; -fx-font-size: 18px; -fx-padding: 0 0 20 0;&quot;</span><span class="s2">);</span>
+<a name="l31"><span class="ln">31   </span></a>
+<a name="l32"><span class="ln">32   </span></a>        <span class="s5">// Manager Login Button</span>
+<a name="l33"><span class="ln">33   </span></a>        <span class="s1">Button btnManager </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s4">&quot;Manager Login&quot;</span><span class="s2">);</span>
+<a name="l34"><span class="ln">34   </span></a>        <span class="s1">btnManager</span><span class="s2">.</span><span class="s1">getStyleClass</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s4">&quot;button-primary&quot;</span><span class="s2">);</span>
+<a name="l35"><span class="ln">35   </span></a>        <span class="s1">btnManager</span><span class="s2">.</span><span class="s1">setPrefWidth</span><span class="s2">(</span><span class="s3">300</span><span class="s2">);</span>
+<a name="l36"><span class="ln">36   </span></a>        <span class="s1">btnManager</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s3">60</span><span class="s2">);</span>
+<a name="l37"><span class="ln">37   </span></a>        <span class="s1">btnManager</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 18px;&quot;</span><span class="s2">);</span>
+<a name="l38"><span class="ln">38   </span></a>        <span class="s1">btnManager</span><span class="s2">.</span><span class="s1">setOnAction</span><span class="s2">(</span><span class="s1">e -&gt; showManagerLogin</span><span class="s2">());</span>
+<a name="l39"><span class="ln">39   </span></a>
+<a name="l40"><span class="ln">40   </span></a>        <span class="s5">// Employee Login Button</span>
+<a name="l41"><span class="ln">41   </span></a>        <span class="s1">Button btnEmployee </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s4">&quot;Employee Login&quot;</span><span class="s2">);</span>
+<a name="l42"><span class="ln">42   </span></a>        <span class="s1">btnEmployee</span><span class="s2">.</span><span class="s1">getStyleClass</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s4">&quot;button-primary&quot;</span><span class="s2">);</span>
+<a name="l43"><span class="ln">43   </span></a>        <span class="s1">btnEmployee</span><span class="s2">.</span><span class="s1">setPrefWidth</span><span class="s2">(</span><span class="s3">300</span><span class="s2">);</span>
+<a name="l44"><span class="ln">44   </span></a>        <span class="s1">btnEmployee</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s3">60</span><span class="s2">);</span>
+<a name="l45"><span class="ln">45   </span></a>        <span class="s1">btnEmployee</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 18px;&quot;</span><span class="s2">);</span>
+<a name="l46"><span class="ln">46   </span></a>        <span class="s1">btnEmployee</span><span class="s2">.</span><span class="s1">setOnAction</span><span class="s2">(</span><span class="s1">e -&gt; showEmployeeLogin</span><span class="s2">());</span>
+<a name="l47"><span class="ln">47   </span></a>
+<a name="l48"><span class="ln">48   </span></a>        <span class="s5">// Info labels</span>
+<a name="l49"><span class="ln">49   </span></a>        <span class="s1">Label lblManagerInfo </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s4">&quot;For Admin &amp; Manager roles&quot;</span><span class="s2">);</span>
+<a name="l50"><span class="ln">50   </span></a>        <span class="s1">lblManagerInfo</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-text-fill: #94a3b8; -fx-font-size: 13px;&quot;</span><span class="s2">);</span>
+<a name="l51"><span class="ln">51   </span></a>        
+<a name="l52"><span class="ln">52   </span></a>        <span class="s1">Label lblEmployeeInfo </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s4">&quot;For Cashier role&quot;</span><span class="s2">);</span>
+<a name="l53"><span class="ln">53   </span></a>        <span class="s1">lblEmployeeInfo</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-text-fill: #94a3b8; -fx-font-size: 13px;&quot;</span><span class="s2">);</span>
+<a name="l54"><span class="ln">54   </span></a>
+<a name="l55"><span class="ln">55   </span></a>        <span class="s1">VBox managerBox </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s3">8</span><span class="s2">, </span><span class="s1">btnManager</span><span class="s2">, </span><span class="s1">lblManagerInfo</span><span class="s2">);</span>
+<a name="l56"><span class="ln">56   </span></a>        <span class="s1">managerBox</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+<a name="l57"><span class="ln">57   </span></a>        
+<a name="l58"><span class="ln">58   </span></a>        <span class="s1">VBox employeeBox </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s3">8</span><span class="s2">, </span><span class="s1">btnEmployee</span><span class="s2">, </span><span class="s1">lblEmployeeInfo</span><span class="s2">);</span>
+<a name="l59"><span class="ln">59   </span></a>        <span class="s1">employeeBox</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+<a name="l60"><span class="ln">60   </span></a>
+<a name="l61"><span class="ln">61   </span></a>        <span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">lblTitle</span><span class="s2">, </span><span class="s1">lblSubtitle</span><span class="s2">, </span><span class="s1">managerBox</span><span class="s2">, </span><span class="s1">employeeBox</span><span class="s2">);</span>
+<a name="l62"><span class="ln">62   </span></a>    <span class="s2">}</span>
+<a name="l63"><span class="ln">63   </span></a>
+<a name="l64"><span class="ln">64   </span></a>    <span class="s0">private void </span><span class="s1">showManagerLogin</span><span class="s2">() {</span>
+<a name="l65"><span class="ln">65   </span></a>        <a href="ManagerLoginView.java.html">ManagerLoginView</a> <span class="s1">managerLogin </span><span class="s2">= </span><span class="s0">new <a href="ManagerLoginView.java.html">ManagerLoginView</a></span><span class="s2">(</span><span class="s1">stage</span><span class="s2">);</span>
+<a name="l66"><span class="ln">66   </span></a>        <span class="s1">Scene scene </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scene</span><span class="s2">(</span><span class="s1">managerLogin</span><span class="s2">, </span><span class="s3">800</span><span class="s2">, </span><span class="s3">600</span><span class="s2">);</span>
+<a name="l67"><span class="ln">67   </span></a>        <span class="s1">scene</span><span class="s2">.</span><span class="s1">getStylesheets</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">Objects</span><span class="s2">.</span><span class="s1">requireNonNull</span><span class="s2">(</span><span class="s1">getClass</span><span class="s2">().</span><span class="s1">getResource</span><span class="s2">(</span><span class="s4">&quot;/styles.css&quot;</span><span class="s2">)).</span><span class="s1">toExternalForm</span><span class="s2">());</span>
+<a name="l68"><span class="ln">68   </span></a>        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">scene</span><span class="s2">);</span>
+<a name="l69"><span class="ln">69   </span></a>        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s4">&quot;Shop Management System - Manager Login&quot;</span><span class="s2">);</span>
+<a name="l70"><span class="ln">70   </span></a>    <span class="s2">}</span>
+<a name="l71"><span class="ln">71   </span></a>
+<a name="l72"><span class="ln">72   </span></a>    <span class="s0">private void </span><span class="s1">showEmployeeLogin</span><span class="s2">() {</span>
+<a name="l73"><span class="ln">73   </span></a>        <a href="EmployeeLoginView.java.html">EmployeeLoginView</a> <span class="s1">employeeLogin </span><span class="s2">= </span><span class="s0">new <a href="EmployeeLoginView.java.html">EmployeeLoginView</a></span><span class="s2">(</span><span class="s1">stage</span><span class="s2">);</span>
+<a name="l74"><span class="ln">74   </span></a>        <span class="s1">Scene scene </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scene</span><span class="s2">(</span><span class="s1">employeeLogin</span><span class="s2">, </span><span class="s3">800</span><span class="s2">, </span><span class="s3">600</span><span class="s2">);</span>
+<a name="l75"><span class="ln">75   </span></a>        <span class="s1">scene</span><span class="s2">.</span><span class="s1">getStylesheets</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">Objects</span><span class="s2">.</span><span class="s1">requireNonNull</span><span class="s2">(</span><span class="s1">getClass</span><span class="s2">().</span><span class="s1">getResource</span><span class="s2">(</span><span class="s4">&quot;/styles.css&quot;</span><span class="s2">)).</span><span class="s1">toExternalForm</span><span class="s2">());</span>
+<a name="l76"><span class="ln">76   </span></a>        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">scene</span><span class="s2">);</span>
+<a name="l77"><span class="ln">77   </span></a>        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s4">&quot;Shop Management System - Employee Login&quot;</span><span class="s2">);</span>
+<a name="l78"><span class="ln">78   </span></a>    <span class="s2">}</span>
+<a name="l79"><span class="ln">79   </span></a><span class="s2">}</span>
+<a name="l80"><span class="ln">80   </span></a></pre>
+</body>
+</html>
