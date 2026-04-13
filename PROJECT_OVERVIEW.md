@@ -62,9 +62,9 @@ The system maintains a clean abstraction between different levels of personnel:
 
 | Role | Username | Password |
 | :--- | :--- | :--- |
-| **Admin** | `admin` | `admin123` |
-| **Manager** | `manager` | `manager123` |
-| **Employee** | `cashier` | `cashier123` |
+| **Admin** | `.....` | `.....` |
+| **Manager** | `.....` | `.....` |
+| **Employee** | `.....` | `.....` |
 
 ---
 
